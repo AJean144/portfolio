@@ -4,7 +4,7 @@ This repository contains the source code for my personal portfolio website.
 
 ## Overview
 
-The portfolio website showcases my work as a software developer. 
+The portfolio website showcases my work as a software developer.
 
 ## Technologies Used
 
