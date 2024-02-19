@@ -7,9 +7,10 @@ import {
 } from "@/components/ui/navigation-menu";
 import devLogo from "../../assets/devLogo.svg";
 import { navLinks } from "../../constants";
+import { SectionWrapper } from "../HOCs";
 
 const Portfolio = () => {
-  return <div className="bg-primary h-96 w-full"></div>;
+  return <div className="bg-primary h-96 w-full">Portfolio</div>;
 };
 
-export default Portfolio;
+export default SectionWrapper(Portfolio, "portfolio", "bg-primary");

@@ -11,7 +11,7 @@ import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 
 const NavBar = () => (
-  <header className="flex items-center justify-between px-4 py-6 bg-background drop-shadow-sm">
+  <header className="flex fixed top-0 z-20 w-full items-center justify-between px-4 py-6 bg-background drop-shadow-sm">
     <Link
       to="/"
       className="text-xl font-bold tracking-wider text-gray-900 dark:text-gray-100 rounded-full p-2 bg-secondary"
