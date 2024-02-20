@@ -13,4 +13,4 @@ const Contact = () => {
   return <div className="bg-primary h-96 w-full">Contact</div>;
 };
 
-export default SectionWrapper(Contact, "contact", "bg-primary");
+export default SectionWrapper(Contact, "contact");
