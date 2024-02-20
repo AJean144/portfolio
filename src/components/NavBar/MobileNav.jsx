@@ -10,7 +10,7 @@ import { navLinks } from "../../constants";
 const MobileNav = () => {
   return (
     <Drawer>
-      <DrawerTrigger className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors duration-200">
+      <DrawerTrigger className="inline-flex items-center p-2 w-10 h-10 justify-center self-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors duration-200">
         <span className="sr-only">Open main menu</span>
         <svg
           className="w-5 h-5"
@@ -48,7 +48,7 @@ const MobileNav = () => {
             ))}
           </ul>
 
-          <DrawerClose className="p-2 w-full rounded-md bg-secondary-700 text-primary-200 hover:bg-secondary-600 hover:text-primary-100 transition-all duration-200">
+          <DrawerClose className="p-2 w-full rounded-md bg-secondary-700 text-primary-200 hover:bg-secondary-600 hover:text-primary-100 transition-all duration-200 shadow-md">
             Close
           </DrawerClose>
         </DrawerFooter>

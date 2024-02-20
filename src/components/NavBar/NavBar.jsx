@@ -20,7 +20,7 @@ const Navbar = ({ className }) => {
           <img src={devLogo} className="h-8 w-10" alt="logo" />
           <span className="sr-only">Logo</span>
         </Link>
-        <div className="hidden md:flex gap-2">
+        <div className="hidden md:flex space-x-8">
           {navLinks.map((link, index) => (
             <Link key={link.id} to={`#${link.id}`} className="self-center">
               {link.title}

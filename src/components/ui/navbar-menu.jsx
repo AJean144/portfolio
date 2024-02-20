@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const transition = {
   type: "spring",
@@ -48,10 +48,30 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 };
 
 export const Menu = ({ setActive, children }) => {
+  const [opacity, setOpacity] = useState("opacity-100");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setOpacity("opacity-70");
+      } else {
+        setOpacity("opacity-100");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-sm boder border-transparent bg-secondary-900 drop-shadow-lg flex space-x-4 px-8 py-6 "
+      className={`relative rounded-sm boder border-transparent bg-secondary-900 drop-shadow-lg flex space-x-4 px-8 py-6 ${opacity} transition-opacity duration-300`}
     >
       {children}
     </nav>

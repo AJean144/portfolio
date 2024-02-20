@@ -14,6 +14,14 @@ import ImagesSlider from "../ImageSlider";
 
 const welcomeText = [
   {
+    text: "I'm",
+    className: "text-secondary-300 drop-shadow-md",
+  },
+  {
+    text: "Andell,",
+    className: "text-secondary-300 drop-shadow-md",
+  },
+  {
     text: "Welcome",
     className: "text-secondary-500 drop-shadow-md",
   },
@@ -28,14 +36,6 @@ const welcomeText = [
   {
     text: "website",
     className: "text-secondary-500 drop-shadow-md",
-  },
-  {
-    text: "I'm",
-    className: "text-secondary-300 drop-shadow-md",
-  },
-  {
-    text: "Andell",
-    className: "text-secondary-300 drop-shadow-md",
   },
 ];
 
@@ -135,7 +135,7 @@ const SkeletonTwo = () => {
     },
   };
 
-  const seoCopy = `SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page (SERP). These visitors can then potentially be converted into customers.`;
+  const seoCopy = `Let's get your website to the top of the search results with my custom built SEO tools.`;
   return (
     <motion.div
       initial="initial"
@@ -228,7 +228,7 @@ const SkeletonFour = () => {
     >
       <div className="flex flex-col contain mx-auto mt-10 md:mt-4 w-[95%] gap-2">
         <TypewriterEffect words={welcomeText} className="-mt-6 sm:mt-0" />
-        <Button className="inline-flex h-10 mt-2 md:mt-6 w-full md:w-28 lg:w-28 lg:mt-12 animate-shimmer items-center justify-center rounded-md border border-secondary-700 bg-[linear-gradient(110deg,#B4CDE4,45%,#8EB4D7,55%,#B4CDE4)] bg-[length:200%_100%] px-6 text-1xl text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <Button className="inline-flex self-center h-10 mt-2 md:mt-6 w-full md:w-28 lg:w-28 lg:mt-12 animate-shimmer items-center justify-center rounded-md border border-secondary-700 bg-[linear-gradient(110deg,#B4CDE4,45%,#8EB4D7,55%,#B4CDE4)] bg-[length:200%_100%] px-6 text-1xl text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           Let's Chat!
         </Button>
       </div>
