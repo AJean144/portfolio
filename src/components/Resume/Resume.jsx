@@ -10,7 +10,7 @@ import { navLinks } from "../../constants";
 import { SectionWrapper } from "../HOCs";
 
 const Resume = () => {
-  return <div className="bg-primary h-96 w-full">Resume</div>;
+  return <div className="content-center">Resume</div>;
 };
 
-export default SectionWrapper(Resume, "resume", "bg-primary");
+export default SectionWrapper(Resume, "resume");

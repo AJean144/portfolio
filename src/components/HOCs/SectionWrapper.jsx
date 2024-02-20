@@ -1,22 +1,11 @@
-import { motion } from "framer-motion";
-import { staggerContainer } from "../../utils/motion";
+import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 
-const SectionWrapper = (Component, idName, sectionColor = "bg-background") =>
+const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
-      <motion.section
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewPort={{ once: true, amount: 0.25 }}
-        className={`${sectionColor} sm:px-16 px-6 sm:py-16 py-10`}
-      >
-        <span className="hash-span" id={idName}>
-          &nbsp;
-        </span>
-
+      <BackgroundGradientAnimation className="h-screen mx-2">
         <Component />
-      </motion.section>
+      </BackgroundGradientAnimation>
     );
   };
 

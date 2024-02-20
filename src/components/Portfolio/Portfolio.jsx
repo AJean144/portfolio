@@ -13,4 +13,4 @@ const Portfolio = () => {
   return <div className="bg-primary h-96 w-full">Portfolio</div>;
 };
 
-export default SectionWrapper(Portfolio, "portfolio", "bg-primary");
+export default SectionWrapper(Portfolio, "portfolio");
