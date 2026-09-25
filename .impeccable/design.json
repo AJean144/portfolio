@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T18:34:56+00:00",
+  "title": "Design System: Andell Jean-Jacques",
+  "extensions": {
+    "colorMeta": {
+      "sky": {
+        "role": "primary",
+        "displayName": "Label Sky",
+        "canonical": "#3375b1",
+        "oklch": "oklch(54.8% 0.115 248.9)",
+        "tonalRamp": [
+          "#000c1c",
+          "#002646",
+          "#004476",
+          "#21649f",
+          "#4587c4",
+          "#68aaea",
+          "#9eceff",
+          "#e2f0ff"
+        ]
+      },
+      "sky-deep": {
+        "role": "neutral",
+        "displayName": "Deep Sky",
+        "canonical": "#22598f",
+        "oklch": "oklch(45.6% 0.105 251.0)",
+        "tonalRamp": [
+          "#000b1d",
+          "#022647",
+          "#064377",
+          "#2d649b",
+          "#4f86bf",
+          "#72a9e5",
+          "#a2cefd",
+          "#e3f0fe"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Packing-House Navy",
+        "canonical": "#10294a",
+        "oklch": "oklch(28.1% 0.068 256.3)",
+        "tonalRamp": [
+          "#000a21",
+          "#0c2545",
+          "#294366",
+          "#476388",
+          "#6784ab",
+          "#89a7d0",
+          "#adccf6",
+          "#e5f0fe"
+        ]
+      },
+      "grove": {
+        "role": "secondary",
+        "displayName": "Grove Green",
+        "canonical": "#1f6b45",
+        "oklch": "oklch(47.1% 0.096 157.3)",
+        "tonalRamp": [
+          "#001006",
+          "#022e19",
+          "#054f2f",
+          "#27714b",
+          "#4b946b",
+          "#6fb78d",
+          "#93ddb0",
+          "#c6fedb"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "Valencia Orange",
+        "canonical": "#f28c28",
+        "oklch": "oklch(73.5% 0.161 58.8)",
+        "tonalRamp": [
+          "#160700",
+          "#3a1c01",
+          "#633404",
+          "#8f4e0a",
+          "#be6a13",
+          "#ed8821",
+          "#feb881",
+          "#feeadb"
+        ]
+      },
+      "sun": {
+        "role": "primary",
+        "displayName": "Sun Yellow",
+        "canonical": "#f6c544",
+        "oklch": "oklch(84.5% 0.150 87.2)",
+        "tonalRamp": [
+          "#110a00",
+          "#302300",
+          "#533f00",
+          "#795d03",
+          "#a27c07",
+          "#cb9e17",
+          "#f3c240",
+          "#ffedc4"
+        ]
+      },
+      "red": {
+        "role": "secondary",
+        "displayName": "Crate Red",
+        "canonical": "#b8332a",
+        "oklch": "oklch(52.3% 0.171 28.4)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4d0001",
+          "#810104",
+          "#ad2821",
+          "#d54f43",
+          "#fe7465",
+          "#fdb4a9",
+          "#ffe9e5"
+        ]
+      },
+      "red-fold": {
+        "role": "secondary",
+        "displayName": "Ribbon Fold",
+        "canonical": "#8e2620",
+        "oklch": "oklch(43.3% 0.140 27.9)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4c0304",
+          "#7c1210",
+          "#a23931",
+          "#c95c51",
+          "#f08073",
+          "#feb4a9",
+          "#ffe9e5"
+        ]
+      },
+      "stock": {
+        "role": "neutral",
+        "displayName": "Label Stock",
+        "canonical": "#fffaf0",
+        "oklch": "oklch(98.6% 0.014 84.6)",
+        "tonalRamp": [
+          "#0e0b05",
+          "#28251d",
+          "#45423a",
+          "#656158",
+          "#868279",
+          "#a9a49b",
+          "#cdc9bf",
+          "#f3eee4"
+        ]
+      },
+      "accent": {
+        "role": "tertiary",
+        "displayName": "Variety Accent",
+        "canonical": "#f28c28",
+        "oklch": "oklch(73.5% 0.161 58.8)",
+        "tonalRamp": [
+          "#160700",
+          "#3a1c01",
+          "#633404",
+          "#8f4e0a",
+          "#be6a13",
+          "#ed8821",
+          "#feb881",
+          "#feeadb"
+        ],
+        "runtimeValues": {
+          "valencia": "#f28c28",
+          "honeybell": "#ef6a36",
+          "ruby": "#f4a07a",
+          "lime": "#a9d05a"
+        }
+      },
+      "accent-ink": {
+        "role": "tertiary",
+        "displayName": "Variety Accent Ink",
+        "canonical": "#f7a650",
+        "oklch": "oklch(78.9% 0.139 64.8)",
+        "tonalRamp": [
+          "#150800",
+          "#381e01",
+          "#603703",
+          "#8a5208",
+          "#b76f10",
+          "#e09138",
+          "#ffb973",
+          "#ffebd8"
+        ],
+        "runtimeValues": {
+          "valencia": "#f7a650",
+          "honeybell": "#f79a6a",
+          "ruby": "#f8b596",
+          "lime": "#a9d05a"
+        }
+      }
+    },
+    "typographyMeta": {
+      "display-slab": {
+        "displayName": "Display Slab",
+        "purpose": "Hero surname only, uppercase, navy drop shade."
+      },
+      "display-script": {
+        "displayName": "Display Script",
+        "purpose": "Hero first name in sun, rotated -5deg."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Every section head, uppercase."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Proof number on each crate label."
+      },
+      "grade-mark": {
+        "displayName": "Grade Mark",
+        "purpose": "Short script stamps: numerals, column heads, client and sector names."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project, community, and step titles."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero statement, 34ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading copy, 40 to 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, ribbon, table heads, fine print. Uppercase, tracked."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lettering-drop-shade",
+        "value": "0.06em 0.06em 0 #10294a",
+        "purpose": "text-shadow on display lettering over sky only (0.045em to 0.06em offsets)."
+      },
+      {
+        "name": "board-lift-red",
+        "value": "0 24px 40px -22px rgba(40, 6, 4, 0.8)",
+        "purpose": "Manifest board on the red band."
+      },
+      {
+        "name": "board-lift-navy",
+        "value": "0 30px 50px -28px rgba(0, 0, 0, 0.8)",
+        "purpose": "Contact label on the navy band."
+      },
+      {
+        "name": "medallion-drop",
+        "value": "drop-shadow(0 10px 14px rgba(8, 20, 38, 0.45))",
+        "purpose": "filter on the portrait medallion over the sun."
+      },
+      {
+        "name": "sun-halo",
+        "value": "0 0 0 10px rgba(246, 197, 68, 0.35), 0 0 0 22px rgba(246, 197, 68, 0.15)",
+        "purpose": "Two flat rings around the sun disc."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Expo-out for button lift, ribbon unfurl, accent recolor."
+      },
+      {
+        "name": "paste",
+        "value": "view() timeline, entry 0% to 55%: from opacity .35, translateY(36px) rotate(-2deg / 2deg on even crates) scale(.97) to none",
+        "purpose": "Crates, boards, and steps paste on as they scroll in. Visible default; only where animation-timeline is supported."
+      },
+      {
+        "name": "unfurl",
+        "value": "0.9s ease 0.15s, clip-path inset(0 100% 0 0) to inset(0)",
+        "purpose": "Hero ribbon, once on load."
+      },
+      {
+        "name": "turn",
+        "value": "180s linear infinite rotate 360deg",
+        "purpose": "Hero sunburst rays."
+      },
+      {
+        "name": "button-lift",
+        "value": "translateY(-2px), 0.25s ease",
+        "purpose": "Button hover."
+      },
+      {
+        "name": "accent-recolor",
+        "value": "color 0.6s ease",
+        "purpose": "Accent-ink text re-inking when the variety changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none",
+        "purpose": "All motion stops under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1000px"
+      },
+      {
+        "name": "tablet",
+        "value": "860px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      },
+      {
+        "name": "narrow",
+        "value": "420px"
+      }
+    ],
+    "grain": {
+      "value": "fractalNoise SVG, baseFrequency .9, 2 octaves, 220px tile",
+      "opacity": 0.09,
+      "blend": "multiply",
+      "purpose": "One lithograph grain fixed over the whole page."
+    }
+  },
+  "components": [
+    {
+      "name": "Sun Button",
+      "kind": "button",
+      "refersTo": "button-sun",
+      "description": "Primary action (download resume). Die-cut sun tab.",
+      "html": "<a class=\"ds-btn-sun\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14\"/></svg> Download resume</a>",
+      "css": ".ds-btn-sun{--notch:8px;clip-path:polygon(var(--notch) 0,calc(100% - var(--notch)) 0,100% var(--notch),100% calc(100% - var(--notch)),calc(100% - var(--notch)) 100%,var(--notch) 100%,0 calc(100% - var(--notch)),0 var(--notch));outline:3px double currentColor;outline-offset:-6px;display:inline-flex;align-items:center;gap:.55em;padding:1em 1.5em;border:0;font:800 .88rem/1 var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,color .2s} .ds-btn-sun:hover{transform:translateY(-2px)} .ds-btn-sun:active{transform:none} .ds-btn-sun:focus-visible{clip-path:none;outline:3px solid var(--sun,#f6c544);outline-offset:3px} .ds-btn-sun{background:var(--sun,#f6c544);color:var(--navy,#10294a)}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action (email, start a project). Navy tab that flips to stock on hover.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16v12H4zM4 7l8 6 8-6\"/></svg> Email me</a>",
+      "css": ".ds-btn-line{--notch:8px;clip-path:polygon(var(--notch) 0,calc(100% - var(--notch)) 0,100% var(--notch),100% calc(100% - var(--notch)),calc(100% - var(--notch)) 100%,var(--notch) 100%,0 calc(100% - var(--notch)),0 var(--notch));outline:3px double currentColor;outline-offset:-6px;display:inline-flex;align-items:center;gap:.55em;padding:1em 1.5em;border:0;font:800 .88rem/1 var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,color .2s} .ds-btn-line:hover{transform:translateY(-2px)} .ds-btn-line:active{transform:none} .ds-btn-line:focus-visible{clip-path:none;outline:3px solid var(--sun,#f6c544);outline-offset:3px} .ds-btn-line{background:var(--navy,#10294a);color:var(--stock,#fffaf0)} .ds-btn-line:hover{background:var(--stock,#fffaf0);color:var(--navy,#10294a)}"
+    },
+    {
+      "name": "Nav Tab",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Top navigation on the sky field; the resume link is the only tab.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">AJJ <span>Brand</span></a><ul><li><a href=\"#\">Work</a></li><li><a href=\"#\">Experience</a></li><li><a class=\"ds-nav-tab\" href=\"#\">Resume <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14\"/></svg></a></li></ul></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem;background:var(--sky,#3375b1);color:var(--stock,#fffaf0)} .ds-nav-mark{font-family:var(--slab,Ultra,serif);font-size:1.35rem;text-decoration:none;color:var(--sun,#f6c544);text-shadow:.06em .06em 0 var(--navy,#10294a)} .ds-nav-mark span{font-family:var(--script,Shrikhand,cursive);font-size:.8em;color:var(--stock,#fffaf0)} .ds-nav ul{display:flex;align-items:center;gap:2rem;margin:0;padding:0;list-style:none;font:700 .9rem var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.06em;text-transform:uppercase} .ds-nav ul a{color:inherit;text-decoration:none} .ds-nav ul a:hover{text-decoration:underline} .ds-nav-tab{--n:6px;display:inline-flex;align-items:center;gap:.35em;padding:.65em 1em;background:var(--navy,#10294a);clip-path:polygon(var(--n) 0,calc(100% - var(--n)) 0,100% var(--n),100% calc(100% - var(--n)),calc(100% - var(--n)) 100%,var(--n) 100%,0 calc(100% - var(--n)),0 var(--n));outline:3px double currentColor;outline-offset:-5px} .ds-nav-tab:focus-visible{clip-path:none;outline:3px solid var(--sun,#f6c544);outline-offset:3px}"
+    },
+    {
+      "name": "Variety Chip",
+      "kind": "chip",
+      "refersTo": "chip-variety",
+      "description": "Radio chips that re-ink the fruit and the page accent.",
+      "html": "<fieldset class=\"ds-varieties\"><label class=\"ds-variety\"><input type=\"radio\" name=\"v\" checked><span class=\"ds-swatch\" style=\"background:#f28c28\"></span>Valencia</label><label class=\"ds-variety\"><input type=\"radio\" name=\"v\"><span class=\"ds-swatch\" style=\"background:#e2531f\"></span>Honeybell</label><label class=\"ds-variety\"><input type=\"radio\" name=\"v\"><span class=\"ds-swatch\" style=\"background:#8cbf3f\"></span>Key Lime</label></fieldset>",
+      "css": ".ds-varieties{border:0;margin:0;padding:1rem;display:flex;flex-wrap:wrap;gap:.5rem;background:var(--sky,#3375b1);color:var(--stock,#fffaf0)} .ds-variety{position:relative;display:inline-flex;align-items:center;gap:.5em;padding:.5em .9em .5em .55em;border:2px solid rgba(255,250,240,.55);border-radius:999px;font:700 .85rem var(--gothic,'Libre Franklin',sans-serif);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s} .ds-variety:hover{border-color:var(--stock,#fffaf0)} .ds-variety input{position:absolute;opacity:0;pointer-events:none} .ds-variety:has(input:checked){background:var(--stock,#fffaf0);border-color:var(--stock,#fffaf0);color:var(--navy,#10294a)} .ds-variety:has(input:focus-visible){outline:3px solid var(--sun,#f6c544);outline-offset:3px} .ds-swatch{width:1.15em;height:1.15em;border-radius:50%;box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}"
+    },
+    {
+      "name": "Ribbon",
+      "kind": "custom",
+      "refersTo": "ribbon",
+      "description": "Swallowtail title ribbon under the hero brand.",
+      "html": "<div class=\"ds-ribbon-wrap\"><p class=\"ds-ribbon\"><span>Forward Deployed Engineer</span></p></div>",
+      "css": ".ds-ribbon-wrap{padding:2rem;background:var(--sky,#3375b1)} .ds-ribbon{position:relative;z-index:0;display:inline-block;margin:0 0 0 1.6rem;padding:.7em 1.1em;background:var(--red,#b8332a);color:var(--stock,#fffaf0);font:800 1.1rem var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.14em;text-transform:uppercase} .ds-ribbon::before,.ds-ribbon::after{content:'';position:absolute;top:.45em;width:1.6rem;height:100%;background:#8e2620;z-index:-1} .ds-ribbon::before{left:-1.2rem;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,40% 50%)} .ds-ribbon::after{right:-1.2rem;clip-path:polygon(0 0,100% 0,60% 50%,100% 100%,0 100%)} .ds-ribbon span{position:relative}"
+    },
+    {
+      "name": "Crate Label",
+      "kind": "card",
+      "refersTo": "crate-label",
+      "description": "Three-panel project label: proof figure, build, constraint.",
+      "html": "<article class=\"ds-crate\"><div class=\"ds-crate-inner\"><p class=\"ds-crate-figure\">$2,000+<small>average order on the product line</small></p><div><h3>3D furniture configurator</h3><p class=\"ds-crate-client\">Rooms to Go · ModularOne</p><p>Customers build modular layouts, swap fabrics, and rotate the sofa before they buy.</p></div><div><p class=\"ds-crate-constraint\">Stable frame rates on desktop and mobile.</p></div></div></article>",
+      "css": ".ds-crate{padding:7px;background:var(--orange,#f28c28);color:var(--navy,#10294a);clip-path:polygon(12px 0,calc(100% - 12px) 0,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px),0 12px);font-family:var(--gothic,'Libre Franklin',sans-serif)} .ds-crate-inner{display:grid;grid-template-columns:30% minmax(0,1fr) minmax(0,.8fr);border:2px solid currentColor} .ds-crate-inner>*{margin:0;padding:1.5rem} .ds-crate-inner>*+*{border-left:5px double currentColor} .ds-crate-figure{font-family:var(--slab,Ultra,serif);font-size:2.6rem;line-height:1} .ds-crate-figure small{display:block;margin-top:.6rem;font:700 .78rem/1.3 var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.08em;text-transform:uppercase} .ds-crate h3{margin:0;font-size:1.4rem;font-weight:800;line-height:1.2} .ds-crate-client{font-family:var(--script,Shrikhand,cursive);margin:.4rem 0} .ds-crate-constraint{font-style:italic;font-weight:500;margin:0}"
+    },
+    {
+      "name": "Manifest Board",
+      "kind": "card",
+      "refersTo": "manifest-board",
+      "description": "Sun board with inset double rule holding the roles table, on the red band.",
+      "html": "<div class=\"ds-band-red\"><div class=\"ds-board\"><table><thead><tr><th>Role</th><th>Dates</th></tr></thead><tbody><tr><th>Everly Health<span>Healthcare</span></th><td>Jan 2021 to Feb 2024</td></tr><tr><th>Politech<span>Civic tech</span></th><td>Sep 2019 to Jan 2021</td></tr></tbody></table></div></div>",
+      "css": ".ds-band-red{padding:2rem;background:var(--red,#b8332a)} .ds-board{background:var(--sun,#f6c544);color:var(--navy,#10294a);padding:2.5rem;border-radius:6px;outline:6px double var(--navy,#10294a);outline-offset:-16px;box-shadow:0 24px 40px -22px rgba(40,6,4,.8);font-family:var(--gothic,'Libre Franklin',sans-serif)} .ds-board table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums lining-nums} .ds-board thead th{text-align:left;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.6rem .75rem;border-bottom:3px solid var(--navy,#10294a)} .ds-board tbody th,.ds-board tbody td{text-align:left;padding:1rem .75rem;border-bottom:1px solid rgba(16,41,74,.28)} .ds-board tbody th span{display:block;font-family:var(--script,Shrikhand,cursive);font-weight:400;font-size:.9rem;color:#8e2620} .ds-board tbody tr:hover{background:rgba(255,250,240,.45)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Citrus Crate Label",
+    "overview": "**Creative North Star: \"The Citrus Crate Label\"**\n\nThe whole page is a stone-lithograph fruit-crate label from a Florida packing house. Every surface is a flat ink: sky, grove, navy, crate red, citrus orange, sun yellow. There is no paper-colored page; the \"paper\" is whatever ink the band is printed in, and cream stock appears only as ink on dark fields or as the fill of a selected chip. A single fractal-noise grain (9% opacity, multiply) sits over everything so the flats read as printed, not rendered.\n\nThe page is a stack of full-bleed color bands, each a different ink, each holding one label or panel on a 1240px measure. Labels carry the print trade's devices: die-cut notched corners, inset double rules, swallowtail ribbons, a slowly turning sunburst, an oval grower medallion. Lettering has three presses: fat Ultra slab for the brand and section heads, Shrikhand brush script for grade marks, and Libre Franklin gothic for everything read.\n\nMotion is the label being handled: labels paste on as they scroll in (a small tilt settling to 0), the ribbon unfurls once, the rays turn over three minutes. The one live control, the variety selector, re-inks the fruit and the page accent together. All motion stops under reduced-motion.",
+    "keyCharacteristics": [
+      "Flat lithograph inks, full-bleed bands, no cream ground.",
+      "One paper grain over the whole page.",
+      "Die-cut notched tabs and labels with inset double rules.",
+      "Three typefaces with fixed jobs: slab, script, gothic.",
+      "One runtime-variable accent driven by the variety selector.",
+      "Toon-shaded 3D fruit with an inked navy outline, as garnish over a flat sun."
+    ],
+    "rules": [
+      {
+        "name": "The No Cream Ground Rule",
+        "body": "Stock is ink, not paper. No band, board, or page uses it as a background.",
+        "section": "colors"
+      },
+      {
+        "name": "The Band Rule",
+        "body": "Each section is a full-bleed band in its own ink: sky, grove, navy, red, sky-deep, orange, navy. Adjacent bands never share a color.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Moving Accent Rule",
+        "body": "`--accent` and `--accent-ink` are the only colors that change at runtime. Anything meant to answer the fruit reads them; nothing else does.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Presses Rule",
+        "body": "Ultra sets the brand, section heads, and proof figures. Shrikhand sets grade marks. Franklin sets everything that is read. No fourth face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Short Script Rule",
+        "body": "Script is a stamp, not a voice: a word or a short phrase, never a sentence.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed Shade Rule",
+        "body": "The hard offset shade is ink on lettering, the way litho labels printed it. It never goes on boxes, buttons, or body text.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat Stone Rule",
+        "body": "No gradients on type or surfaces. The only gradients are the conic ray masks and the no-WebGL fruit's highlight.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Die-Cut Rule",
+        "body": "Interactive tabs and project labels are notched, never rounded. When a notched element takes focus, the clip drops so the ring shows in full.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do print each section as a full-bleed band in its own ink, content held to 1240px.",
+      "Do use the notched tab with an inset double rule for every button and tab, and drop the notch on focus.",
+      "Do keep Ultra for brand, heads, and figures; Shrikhand for short grade marks; Franklin for reading.",
+      "Do route anything that should answer the variety selector through `--accent` / `--accent-ink`, with navy ink on the accent fill.",
+      "Do use inline SVG stroke icons (18px, 1.8 stroke, currentColor).",
+      "Do paste labels on with a small tilt settling to 0, from a visible default, and stop all motion under reduced-motion."
+    ],
+    "donts": [
+      "Don't use a cream or off-white page or section ground.",
+      "Don't put gradients on type or surfaces.",
+      "Don't set sun on sky below display size (3.01:1), or stock on the accent fill (2.97:1 at Honeybell).",
+      "Don't put the hard drop shade on boxes, buttons, or body text.",
+      "Don't round the corners of tabs or crate labels.",
+      "Don't make the 3D fruit a gate: the flat fallback must always render."
+    ]
+  }
+}
