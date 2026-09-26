@@ -1,0 +1,57 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deploy at a time; a newer push cancels an older in-flight one.
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+env:
+  SSH_HOST: 156.67.74.141
+  SSH_PORT: 65002
+  SSH_USER: u792841540
+  # This Hostinger account also serves other sites. Only ever touch this folder.
+  TARGET_DIR: domains/andelljean.me/public_html/
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - run: npm run build
+      - name: Install deploy key and pinned host keys
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+      # No --delete: public_html holds other content that is not in this repo.
+      - name: Upload dist/
+        run: |
+          rsync -rlz --checksum --itemize-changes \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes -o BatchMode=yes" \
+            dist/ "$SSH_USER@$SSH_HOST:$TARGET_DIR"
+      - name: Check the live site serves this build
+        run: |
+          expected=$(grep -o 'assets/index-[^"]*\.js' dist/index.html)
+          # The CDN can lag a few seconds behind the upload.
+          for i in 1 2 3 4 5 6; do
+            curl -fsS -H 'Cache-Control: no-cache' https://andelljean.me/ | grep -q "$expected" && exit 0
+            sleep 10
+          done
+          echo "andelljean.me is not serving $expected after 60s" && exit 1
