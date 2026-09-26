@@ -49,9 +49,10 @@ jobs:
       - name: Check the live site serves this build
         run: |
           expected=$(grep -o 'assets/index-[^"]*\.js' dist/index.html)
-          # The CDN can lag a few seconds behind the upload.
-          for i in 1 2 3 4 5 6; do
-            curl -fsS -H 'Cache-Control: no-cache' https://andelljean.me/ | grep -q "$expected" && exit 0
+          # Hostinger's CDN edges can serve the old page for a while; bust the cache and give it 3 min.
+          for i in $(seq 1 18); do
+            served=$(curl -fsS "https://andelljean.me/?deploy=$GITHUB_SHA-$i" | grep -o 'assets/index-[^"]*\.js' || true)
+            [ "$served" = "$expected" ] && echo "live: $served" && exit 0
             sleep 10
           done
-          echo "andelljean.me is not serving $expected after 60s" && exit 1
+          echo "expected $expected, live still serves ${served:-nothing}" && exit 1
