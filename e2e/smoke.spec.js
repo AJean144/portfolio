@@ -26,6 +26,13 @@ test("picking a variety retints the page accent", async ({ page }) => {
   await expect(page.locator('input[value="lime"]')).toBeChecked();
 });
 
+// Regression: the unfurl animation's end state used to clip off the swallowtail ends.
+test("ribbon tails stay visible after the unfurl", async ({ page }) => {
+  await page.goto("/");
+  const ribbon = page.locator(".ribbon");
+  await expect.poll(() => ribbon.evaluate((el) => getComputedStyle(el).clipPath), { timeout: 3000 }).toBe("none");
+});
+
 // Regression: a WebGL failure used to blank the whole page.
 test("page survives without WebGL", async ({ page }) => {
   await page.addInitScript(() => {
