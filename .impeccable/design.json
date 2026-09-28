@@ -358,7 +358,7 @@
       "kind": "custom",
       "refersTo": "ribbon",
       "description": "Swallowtail title ribbon under the hero brand.",
-      "html": "<div class=\"ds-ribbon-wrap\"><p class=\"ds-ribbon\"><span>Forward Deployed Engineer</span></p></div>",
+      "html": "<div class=\"ds-ribbon-wrap\"><p class=\"ds-ribbon\"><span>Applied AI Engineer</span></p></div>",
       "css": ".ds-ribbon-wrap{padding:2rem;background:var(--sky,#3375b1)} .ds-ribbon{position:relative;z-index:0;display:inline-block;margin:0 0 0 1.6rem;padding:.7em 1.1em;background:var(--red,#b8332a);color:var(--stock,#fffaf0);font:800 1.1rem var(--gothic,'Libre Franklin',sans-serif);letter-spacing:.14em;text-transform:uppercase} .ds-ribbon::before,.ds-ribbon::after{content:'';position:absolute;top:.45em;width:1.6rem;height:100%;background:#8e2620;z-index:-1} .ds-ribbon::before{left:-1.2rem;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,40% 50%)} .ds-ribbon::after{right:-1.2rem;clip-path:polygon(0 0,100% 0,60% 50%,100% 100%,0 100%)} .ds-ribbon span{position:relative}"
     },
     {

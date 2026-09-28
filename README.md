@@ -1,6 +1,6 @@
 # andelljean.me
 
-Portfolio for Andell Jean-Jacques, Forward Deployed Engineer. Vite + React, one stylesheet, a lazy-loaded THREE.js fruit in the hero.
+Portfolio for Andell Jean-Jacques, Applied AI Engineer. Vite + React, one stylesheet, a lazy-loaded THREE.js fruit in the hero.
 
 ```sh
 npm install

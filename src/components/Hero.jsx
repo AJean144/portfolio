@@ -56,7 +56,7 @@ export default function Hero({ variety, setVariety }) {
             <span className="brand-script">Andell</span>
             <span className="brand-slab">Jean-Jacques</span>
           </h1>
-          <p className="ribbon"><span>Forward Deployed Engineer</span></p>
+          <p className="ribbon"><span>Applied AI Engineer</span></p>
           <p className="hero-lede">
             Full-stack AI systems. I start with your business problem and end with a deployed system, then I own what breaks after launch.
           </p>

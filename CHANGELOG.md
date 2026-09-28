@@ -2,6 +2,11 @@
 
 All notable changes to andelljean.me. Versions are `MAJOR.MINOR.PATCH.MICRO`.
 
+## [1.0.1.0] - 2026-09-27
+
+### Changed
+- The headline title is now "Applied AI Engineer" instead of "Forward Deployed Engineer" (hero ribbon, page title, search and social previews, and the hiring note in Contact).
+
 ## [1.0.0.0] - 2026-09-25
 
 ### Added

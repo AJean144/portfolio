@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Primary: hiring managers and technical recruiters at AI companies and frontier labs evaluating Andell for Forward Deployed Engineer roles. They arrive from a resume, LinkedIn, or referral link, usually on a laptop between other candidates, and decide in under a minute whether to read further.
+Primary: hiring managers and technical recruiters at AI companies and frontier labs evaluating Andell for applied AI engineering roles. They arrive from a resume, LinkedIn, or referral link, usually on a laptop between other candidates, and decide in under a minute whether to read further.
 
 Secondary: owners and executives considering RapidFire Agency for a consulting engagement. They are often non-technical and want to know "can this person fix my operational problem and own it after launch."
 
@@ -38,7 +38,7 @@ Visitors cross-reference the site with the PDF resume and LinkedIn. The site mus
 
 ## Evidence on Hand
 
-Source of truth: `~/Downloads/Andell_Jean-Jacques_FDE_Resume.pdf` (Aug 2026).
+Source of truth: `~/Downloads/Andell_Jean-Jacques_FDE_Resume.pdf` (Aug 2026). Its headline title is still "Forward Deployed Engineer"; the site uses "Applied AI Engineer" as of 2026-09-27 at the owner's direction. Everything else must still match.
 
 - Contact: Orlando, FL · (407) 765-5182 · ajeanjacques42@gmail.com · linkedin.com/in/ajean144 · github.com/AJean144 · andelljean.me
 - Roles: RapidFire Agency (Founder & Principal Engineer, Jan 2024–Present), G2i (Contract, 2025–Present), Rooms to Go (Senior SWE Contract, Oct 2025–Apr 2026), TRAILS (Senior SWE, May 2024–Apr 2025), Everly Health (Senior SWE & Team Lead, Jan 2021–Feb 2024), Politech (Senior Front-End, Sep 2019–Jan 2021), Differential Consulting (Senior SWE, Sep 2017–Sep 2019).
