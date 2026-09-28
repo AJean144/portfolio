@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="paths">
           <div>
             <h3>Hiring?</h3>
-            <p>I’m looking at Forward Deployed Engineer roles. The resume has the full detail.</p>
+            <p>I’m looking at applied AI engineering roles. The resume has the full detail.</p>
             <a className="btn btn-sun" href={links.resume} download><Icon name="download" /> Download resume</a>
           </div>
           <div>

@@ -5,7 +5,7 @@ test("page renders the resume content", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Andell Jean-Jacques/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Jean-Jacques");
-  await expect(page.getByText("Forward Deployed Engineer").first()).toBeVisible();
+  await expect(page.getByText("Applied AI Engineer").first()).toBeVisible();
   await expect(page.locator(".crate")).toHaveCount(work.length);
   await expect(page.locator("#manifest tbody tr")).toHaveCount(manifest.length);
 });
