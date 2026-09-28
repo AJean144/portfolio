@@ -2,6 +2,11 @@
 
 All notable changes to andelljean.me. Versions are `MAJOR.MINOR.PATCH.MICRO`.
 
+## [1.0.1.1] - 2026-09-27
+
+### Changed
+- The downloadable resume now carries the "Applied AI Engineer" title too, so it matches the site.
+
 ## [1.0.1.0] - 2026-09-27
 
 ### Changed
