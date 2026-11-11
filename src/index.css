@@ -34,7 +34,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .stage { position: fixed; inset: 0; }
 .room { position: absolute !important; inset: 0; }
-.room-fallback { background: linear-gradient(#6a5aa0, #eaa6b4 50%, #f6c2a0 56%, #7a5c96 57%, #2a2140); }
+.room-fallback { background: #07070b url("/room-still.webp") 72% center / cover no-repeat; }
 
 /* Name, one line, and a chip for everything in the room */
 .hud {

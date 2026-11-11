@@ -7,7 +7,8 @@ test("the room names its owner and lists everything in it", async ({ page }) => 
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Jean-Jacques");
   await expect(page.getByText("Applied AI Engineer").first()).toBeVisible();
   await expect(page.locator(".hud nav button")).toHaveCount(hotspots.length);
-  await expect(page.locator("canvas.room, .room canvas").first()).toBeVisible();
+  // A GPU gets the live 3D room; CI's software renderer gets the still.
+  await expect(page.locator(".room canvas, .room-fallback").first()).toBeVisible();
 });
 
 test("a chip opens that object's card, Escape closes it", async ({ page }) => {
@@ -77,6 +78,7 @@ test("page survives without WebGL", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(page.locator(".room-fallback")).toBeVisible();
+  await expect(page.locator(".room-fallback")).toHaveCSS("background-image", /room-still\.webp/);
   await page.getByRole("button", { name: "About" }).click();
   await expect(page.locator(".card")).toContainText("Orlando");
 });

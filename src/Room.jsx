@@ -1,6 +1,6 @@
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { Bloom, EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
-import { Component, Suspense, useMemo, useRef } from "react";
+import { Component, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
@@ -285,6 +285,33 @@ function Scene({ onPick, onHover }) {
   );
 }
 
+// Compiling every lit material on the first frame froze the page for ~4 s on an M5 (15 s+ on CI's software GL).
+// Compile them off the main thread first, and only start drawing once they are ready.
+function Warm({ onReady }) {
+  const { gl, scene, camera } = useThree();
+  useEffect(() => {
+    let live = true;
+    const done = () => live && onReady();
+    gl.compileAsync(scene, camera).then(done, done);
+    return () => { live = false; };
+  }, [gl, scene, camera, onReady]);
+  return null;
+}
+
+// Without a GPU (software rendering, or no WebGL) this scene would lock the page for 15 s+, so show a still of it instead.
+function canRender() {
+  try {
+    const g = document.createElement("canvas").getContext("webgl2");
+    if (!g) return false;
+    const info = g.getExtension("WEBGL_debug_renderer_info");
+    const name = info ? g.getParameter(info.UNMASKED_RENDERER_WEBGL) : "";
+    g.getExtension("WEBGL_lose_context")?.loseContext();
+    return !/swiftshader|llvmpipe|softpipe|software/i.test(name);
+  } catch {
+    return false;
+  }
+}
+
 // A WebGL failure must not blank the page: the chips, cards and computer still work without the room.
 class Boundary extends Component {
   state = { failed: false };
@@ -297,12 +324,27 @@ class Boundary extends Component {
 }
 
 export default function Room({ focus, inOS, onPick, onHover }) {
+  // The OS covers the room once its fade-in ends; stop rendering what nobody can see.
+  const [paused, setPaused] = useState(false);
+  const [ready, setReady] = useState(false);
+  const onReady = useCallback(() => setReady(true), []);
+  const [gpu] = useState(canRender);
+  useEffect(() => {
+    if (!inOS) {
+      setPaused(false);
+      return;
+    }
+    const t = setTimeout(() => setPaused(true), 1200);
+    return () => clearTimeout(t);
+  }, [inOS]);
+  if (!gpu) return <div className="room room-fallback" />;
   return (
     <Boundary>
-      <Canvas className="room" aria-hidden="true" shadows="soft" dpr={[1, 2]} camera={{ fov: 40, position: [0.4, 1.45, 7] }} onCreated={({ gl }) => (gl.toneMappingExposure = 0.9)} onPointerMissed={() => onPick(null)}>
+      <Canvas className="room" aria-hidden="true" frameloop={ready && !paused ? "always" : "never"} shadows="soft" dpr={[1, 2]} camera={{ fov: 40, position: [0.4, 1.45, 7] }} onCreated={({ gl }) => (gl.toneMappingExposure = 0.9)} onPointerMissed={() => onPick(null)}>
         <color attach="background" args={["#07070b"]} />
         <Suspense fallback={null}>
           <Scene onPick={onPick} onHover={onHover} />
+          {!inOS && <Warm onReady={onReady} />}
           <EffectComposer disableNormalPass>
             <Bloom mipmapBlur luminanceThreshold={0.85} intensity={0.7} radius={0.7} />
             <Vignette offset={0.25} darkness={0.75} />
