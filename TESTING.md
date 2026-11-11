@@ -10,7 +10,7 @@ This site is one static page, so the suite is a Playwright smoke test that drive
 
 ## Layers
 
-- **Smoke / E2E (`e2e/smoke.spec.js`):** the page renders resume content, the resume PDF downloads, the variety picker retints the page, and the page survives without WebGL.
+- **Smoke / E2E (`e2e/smoke.spec.js`):** the room lists every object, chips open cards, the resume PDF downloads, the in-room computer runs terminal commands, and the page survives without WebGL.
 - **Unit / integration:** none. There's no logic outside the page yet. Add Vitest when some appears.
 
 ## Conventions
