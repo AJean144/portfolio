@@ -8,13 +8,6 @@ export const links = {
   resume: "/Andell_Jean-Jacques_Resume.pdf",
 };
 
-export const varieties = [
-  { id: "valencia", name: "Valencia", peel: "#f28c28", accent: "#f28c28", onDark: "#f7a650" },
-  { id: "honeybell", name: "Honeybell", peel: "#e2531f", accent: "#ef6a36", onDark: "#f79a6a" },
-  { id: "ruby", name: "Ruby Red", peel: "#f09a6e", accent: "#f4a07a", onDark: "#f8b596" },
-  { id: "lime", name: "Key Lime", peel: "#8cbf3f", accent: "#a9d05a", onDark: "#a9d05a" },
-];
-
 export const process = [
   { step: "Discovery", text: "Sit with the owner or exec. Find the real operational bottleneck, not the stated one." },
   { step: "Scope", text: "Turn it into an engineering problem with edges, risks, and milestones." },
@@ -97,4 +90,44 @@ export const skills = [
   { name: "Frontend", items: ["React", "Next.js App Router", "TypeScript", "THREE.js", "Design systems", "Core Web Vitals", "Accessibility"] },
   { name: "Cloud", items: ["AWS (EC2, S3, Lambda)", "Azure", "Vercel, Render", "Cloudflare Workers", "Docker", "CI/CD"] },
   { name: "Client-facing", items: ["Discovery with execs", "Statements of work", "Scope & change orders", "Technical docs", "Team mentoring"] },
+];
+
+export const intro =
+  "Andell Jean-Jacques is an Applied AI Engineer in Orlando. He builds full-stack AI systems: RAG pipelines, custom MCP servers, and THREE.js 3D. 12+ years across healthcare, edtech, fintech, civic tech, and retail.";
+
+// 3D models. CC-BY ones must stay credited on the site; Poly Haven (CC0) is credited as thanks.
+export const credits = [
+  ["Ultra-Wide Monitor", "Dumb Yet Creative", "https://sketchfab.com/3d-models/ultra-wide-monitor-f7445b4b5d84412aa58ed7379483267c"],
+  ["Mechanical keyboard", "FelikinRuslan", "https://sketchfab.com/3d-models/mechanical-keyboard-1ba4055c33674567b51b783701ed05ce"],
+  ["Podcast Microphone", "thezaynegrogan", "https://sketchfab.com/3d-models/podcast-microphone-5cf2389b7f264931a1833684804e9798"],
+  ["Coffee Mug", "Ole Gunnar Isager", "https://sketchfab.com/3d-models/coffee-mug-school-project-5f5ccee1514c440887c072fae8e0d699"],
+  ["Prop Globe", "Rosbergen Designs", "https://sketchfab.com/3d-models/prop-globe-acbc64addc98410582d1f631dd9b6d5f"],
+  ["Antique Trophy Goblets", "Mad_Lobster_Workshop", "https://sketchfab.com/3d-models/antique-trophy-goblets-07b46238d3d34842af48ad817f38f341"],
+  ["Floor Lamp", "bilgehan.korkmaz", "https://sketchfab.com/3d-models/floor-lamp-33eb258d9873435690254cfbb0ea46ec"],
+  ["Gears", "Cécile Amstad", "https://sketchfab.com/3d-models/gears-2426c5d9478142789e08f0c0e170dc53"],
+  ["Gaming Laptop", "Vivien Deroche", "https://sketchfab.com/3d-models/gaming-laptop-4e72a2078b3c4a75a821ab09830693fe"],
+  ["Chair, plant, sofa, books, case, frame, sky, wood", "Poly Haven", "https://polyhaven.com", "CC0"],
+];
+
+export const community = [
+  { name: "“Each One Teach One”", role: "Founder & Mentor · 2019 – now", text: "A mentorship program for underrepresented engineers entering tech: structured technical training and career guidance in the Orlando community." },
+  { name: "The Citrus Club", role: "Speaker & Technology Lead · 2025 – now", text: "Recurring sessions on AI-assisted development and modern architecture for a mostly non-engineering audience. Technical trade-offs, in business terms." },
+];
+
+const job = manifest[0];
+const piece = (i) => ({ title: work[i].title, figure: work[i].figure, note: work[i].figureNote, client: work[i].client, body: work[i].body, extra: work[i].constraint });
+
+// Everything you can click in the room. pos is the object's centre in metres; Room.jsx builds the object there.
+export const hotspots = [
+  { id: "about", chip: "About", kicker: "On the wall · Portrait", title: "Andell Jean-Jacques", client: "Applied AI Engineer · Orlando", body: intro, links: [{ label: "LinkedIn", href: links.linkedin }, { label: "Email", href: links.email }], pos: [0.4, 1.55, 0.06], hit: [0.5, 0.6, 0.1], dot: 0.36 },
+  { id: "rapidfire", chip: "RapidFire", kicker: "Top shelf · Globe", title: job.company, client: `${job.role} · ${job.dates}`, body: "A solo consultancy. Most useful as the only engineer in the room with a non-technical owner or exec.", extra: job.note, pos: [1.35, 2.31, 0.17] },
+  { id: "automation", chip: "Automation", kicker: "Top shelf · Gears", ...piece(5), pos: [1.9, 2.29, 0.17] },
+  { id: "ai", chip: "RAG + MCP", kicker: "Top shelf · The glowing one", ...piece(4), pos: [2.45, 2.27, 0.17] },
+  { id: "configurator", chip: "3D configurator", kicker: "Top shelf · A very small sofa", ...piece(0), pos: [3.0, 2.24, 0.17], hit: [0.4, 0.2, 0.25], dot: 0.17 },
+  { id: "courts", chip: "Courts", kicker: "Low shelf · Law books", ...piece(3), pos: [1.75, 1.74, 0.17] },
+  { id: "campaigns", chip: "Campaigns", kicker: "Low shelf · Trophies", ...piece(1), pos: [2.2, 1.68, 0.17], dot: 0.12 },
+  { id: "payments", chip: "Payments", kicker: "Low shelf · Health kit", ...piece(2), pos: [2.65, 1.7, 0.17], dot: 0.14 },
+  { id: "resume", chip: "Résumé", kicker: "On the desk · Notepad", title: "Résumé", body: "The full history, as a PDF.", links: [{ label: "Download résumé", href: links.resume, download: true }], pos: [1.75, 0.82, 0.78], hit: [0.25, 0.08, 0.28], dot: 0.1 },
+  { id: "github", chip: "GitHub", kicker: "On the desk · Laptop", title: "GitHub", body: "The code lives here.", links: [{ label: "github.com/AJean144", href: links.github }], pos: [3.0, 0.92, 0.62], hit: [0.4, 0.3, 0.3] },
+  { id: "computer", chip: "Computer", pos: [2.2, 1.18, 0.44], hit: [1.3, 0.44, 0.06], dot: 0.34 },
 ];

@@ -13,7 +13,7 @@ module.exports = {
   plugins: ['react-refresh'],
   overrides: [
     // react-three-fiber elements take three.js props React doesn't know.
-    { files: ['src/components/Fruit.jsx'], rules: { 'react/no-unknown-property': 'off' } },
+    { files: ['src/Room.jsx'], rules: { 'react/no-unknown-property': 'off' } },
     { files: ['playwright.config.js'], env: { node: true } },
   ],
   rules: {
